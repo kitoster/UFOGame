@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-// Define functions
+
 void greet() {
 
   std::cout << "=============\n";
@@ -11,25 +11,30 @@ void greet() {
 
 }
 
+//Display the player's incorrect guesses and their current answer. 
 void display_status(std::vector<char> incorrect, std::string answer) {
 
   std::cout << "\nIncorrect Guesses:\n";
 
-  for (int i = 0; i < incorrect.size(); i++) {
+  for (int i = 0; i < incorrect.size(); i++) 
+  {
     std::cout << incorrect[i] << ' ';
   }
   
   std::cout << "\nCodeword:\n";
 
-  for (int i = 0; i < answer.length(); i++) {
+  for (int i = 0; i < answer.length(); i++) 
+  {
     std::cout << answer[i] << ' ';
   }
 
 }
 
+//Handles scenarios of the player either winning or losing. 
 void end_game(std::string answer, std::string codeword) {
 
-  if (answer == codeword) {
+  if (answer == codeword)
+  {
 
     std::cout << "Congrats! You won and saved your friend!\n";
 
@@ -41,6 +46,7 @@ void end_game(std::string answer, std::string codeword) {
 
 }
 
+//Displays art based on the player's number of misses.  
 void display_misses(int misses) {
 
   if (misses == 0 || misses == 1) {
